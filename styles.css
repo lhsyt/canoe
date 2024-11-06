@@ -1,0 +1,132 @@
+/* 全局样式 */
+:root {
+    --primary-color: #ff69b4;
+    --secondary-color: #4a90e2;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+/* 首页英雄区样式 */
+.hero-section {
+    background-color: var(--light-bg);
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* 通用区块样式 */
+.section {
+    padding: 100px 0;
+}
+
+.section:nth-child(even) {
+    background-color: var(--light-bg);
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+}
+
+/* 关于我们部分的样式 */
+.section-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto 2rem;
+}
+
+.value-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.founder-achievements .achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.founder-achievements .achievement-item i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* 图片悬停效果 */
+.img-fluid.rounded.shadow {
+    transition: transform 0.3s ease;
+}
+
+.img-fluid.rounded.shadow:hover {
+    transform: scale(1.02);
+} 
